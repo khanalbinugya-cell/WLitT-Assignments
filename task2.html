@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="textColour">Text colour:</label>
+        <input type="text" id="textColour" placeholder="Enter text colour"/> </br> <br/>
+        <label for="bgColour">Background colour:</label>
+        <input type="text" id="bgColour" placeholder="Enter background colour"/> </br> <br/>
+        <label for="content">Content:</label>
+        <input type="text" id="content" placeholder="Enter content"/> </br> <br/>
+        <button type="submit" id="change">Change</button>   
+    </form>
+    <script >
+        const form = document.getElementById("myForm");
+        const textColourInput = document.getElementById("textColour");
+        const bgColourInput = document.getElementById("bgColour");
+        const contentInput = document.getElementById("content");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const textColour = textColourInput.value;
+            const bgColour = bgColourInput.value;
+            const content = contentInput.value;
+
+            document.body.style.color = textColour;
+            document.body.style.backgroundColor = bgColour;
+            document.body.textContent = content;
+        }); 
+    </script>   
+     
+    
+</body>
+</html>

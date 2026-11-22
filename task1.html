@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+
+   
+    
+</head>
+<body>
+
+    <h1 id="heading">Watch me grow</h1>
+
+    <input type="number" id="fontSize" placeholder="Enter font size">
+
+    <button id="changeSize">Change Font Size</button>
+    <script >
+        const heading = document.getElementById("heading");
+        const input = document.getElementById("fontSize");
+        const button = document.getElementById("changeSize");
+
+            button.addEventListener("click", function() {
+
+            const value = input.value;
+
+            heading.style.fontSize = value + "px";
+
+});
+    </script>
+
+</body>
+</html>
